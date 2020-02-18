@@ -1,12 +1,13 @@
 import graphene
-from tracks import schema
+from tracks import schema as tracks_schema
+from users import schema as users_schema
 
 
-class Query(schema.Query, graphene.ObjectType):
+class Query(tracks_schema.Query, graphene.ObjectType):
     pass
 
 
-class Mutation(schema.Mutation, graphene.ObjectType):
+class Mutation(users_schema.Mutation, tracks_schema.Mutation, graphene.ObjectType):
     pass
 
 

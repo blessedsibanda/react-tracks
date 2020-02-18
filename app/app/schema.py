@@ -3,7 +3,7 @@ from tracks import schema as tracks_schema
 from users import schema as users_schema
 
 
-class Query(tracks_schema.Query, graphene.ObjectType):
+class Query(users_schema.Query, tracks_schema.Query, graphene.ObjectType):
     pass
 
 
